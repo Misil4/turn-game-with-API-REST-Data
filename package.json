@@ -1,0 +1,24 @@
+{
+  "name": "repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Misil4/2122-panic-carlos-silva.git"
+  },
+  "author": "Misil4",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Misil4/2122-panic-carlos-silva/issues"
+  },
+  "homepage": "https://gitlab.com/Misil4/2122-panic-carlos-silva#readme",
+  "dependencies": {
+    "axios": "^0.22.0"
+  }
+}
