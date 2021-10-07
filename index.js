@@ -1,28 +1,25 @@
 import {getVillainZarate, getRandomHero} from "./gameController.js";
-import {
-    initialize_hitPoints,
-    RandomFaces,
-    block_Attack,
-    initialize_Attack,
-    turn
-} from './functions.js';
+import {initialize_hitPoints, initialize_Attack, turn} from './functions.js';
 getVillainZarate().then((villainZarate) => {
     getRandomHero().then((superHero) => {
         let turn_counter = 0;
-        let dice = 0;
         villainZarate.powerstats.hitpoints = initialize_hitPoints(villainZarate);
         superHero.powerstats.hitpoints = (initialize_hitPoints(superHero));
         console.log("BIENVENIDO A PANIC CHALLENGE");
-        console.log(villainZarate);
-        console.log(superHero);
         while (villainZarate.powerstats.hitpoints > 1 || superHero.powerstats.hitpoints > 1) {
-            if (villainZarate.powerstats.durability < 1 || superHero.powerstats.durability < 1) {
-                console.log(`Uno de los jugadores 
-             no tiene mas durabilidad, partida finalizada`);
+            if (villainZarate.powerstats.durability < 1 || villainZarate.powerstats.hitpoints < 1) {
+                console.log(`el jugador ${
+                    villainZarate.name
+                } no puede continuar, partida finalizada\n Ganador ${
+                    superHero.name
+                }`);
                 return;
-            }
-            if (villainZarate.powerstats.hitpoints < 1 || superHero.powerstats.hitpoints < 1) {
-                console.log("PARTIDA TERMINADA");
+            } else if (superHero.powerstats.durability < 1 || villainZarate.powerstats.hitpoints < 1) {
+                console.log(`el jugador ${
+                    superHero.name
+                } no puede continuar, partida finalizada  Ganador ${
+                    villainZarate.name
+                }`);
                 return;
             }
             turn_counter++;
@@ -41,7 +38,10 @@ getVillainZarate().then((villainZarate) => {
                     if (superHero.powerstats.durability < 1) {
                         console.log(`El jugador ${
                             superHero.name
-                        } no tiene mas durabilidad, partida finalizada`);
+                        } no tiene mas durabilidad, partida finalizada
+                        Ganador ${
+                            villainZarate.name
+                        }`);
                         return;
                     }
                 }
@@ -59,7 +59,10 @@ getVillainZarate().then((villainZarate) => {
                     if (villainZarate.powerstats.durability < 1) {
                         console.log(`El jugador ${
                             villainZarate.name
-                        } no tiene mas durabilidad, partida finalizada`);
+                        } no tiene mas durabilidad, partida finalizada
+Ganador ${
+                            superHero.name
+                        }`);
                         return;
                     }
                 }
@@ -78,7 +81,10 @@ getVillainZarate().then((villainZarate) => {
                     if (villainZarate.powerstats.durability < 1) {
                         console.log(`El jugador ${
                             villainZarate.name
-                        } no tiene mas durabilidad, partida finalizada`);
+                        } no tiene mas durabilidad, partida finalizada
+                        Ganador ${
+                            superHero.name
+                        }`);
                         return;
                     }
                 }
@@ -96,7 +102,10 @@ getVillainZarate().then((villainZarate) => {
                     if (superHero.powerstats.durability < 1) {
                         console.log(`El jugador ${
                             superHero.name
-                        } no tiene mas durabilidad, partida finalizada`);
+                        } no tiene mas durabilidad, partida finalizada
+                        Ganador ${
+                            villainZarate.name
+                        }`);
                         return;
                     }
                 }
@@ -105,5 +114,8 @@ getVillainZarate().then((villainZarate) => {
 
     })
 });
+
+
+
 
 
