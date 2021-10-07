@@ -4,7 +4,7 @@ function getRandomInt(min, max) {
   }
 const getVillainZarate = async () => {
     const data = await getAllData();
-    return data.filter((element) => element.id ===4);
+    return data[3];
 }
 
 const getRandomHero = async () => {
@@ -13,5 +13,5 @@ const getRandomHero = async () => {
 }
 
 export {
-    getVillainZarate,getRandomHero
+    getVillainZarate,getRandomHero,getRandomInt
 }
