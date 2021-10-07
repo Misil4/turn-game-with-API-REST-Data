@@ -33,7 +33,7 @@ getVillainZarate().then((villainZarate) => {
                         superHero.name
                     }\nVida restante ${
                         superHero.powerstats.hitpoints
-                    }`);
+                    }\n`);
                     villainZarate.powerstats.durability -= 1
                     if (superHero.powerstats.durability < 1) {
                         console.log(`El jugador ${
@@ -54,7 +54,7 @@ getVillainZarate().then((villainZarate) => {
                         villainZarate.name
                     }\nVida restante ${
                         villainZarate.powerstats.hitpoints
-                    }`);
+                    }\n`);
                     superHero.powerstats.durability -= 1
                     if (villainZarate.powerstats.durability < 1) {
                         console.log(`El jugador ${
@@ -76,7 +76,7 @@ Ganador ${
                         villainZarate.name
                     }\nVida restante ${
                         villainZarate.powerstats.hitpoints
-                    }`);
+                    }\n`);
                     superHero.powerstats.durability -= 1
                     if (villainZarate.powerstats.durability < 1) {
                         console.log(`El jugador ${
@@ -97,7 +97,7 @@ Ganador ${
                         superHero.name
                     }\nVida restante ${
                         superHero.powerstats.hitpoints
-                    }`);
+                    }\n`);
                     villainZarate.powerstats.durability -= 1
                     if (superHero.powerstats.durability < 1) {
                         console.log(`El jugador ${
