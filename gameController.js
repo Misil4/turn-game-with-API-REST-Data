@@ -1,7 +1,7 @@
 import {getAllData} from "./gameService.js"
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
-  }
+}
 const getVillainZarate = async () => {
     const data = await getAllData();
     return data[3];
@@ -9,9 +9,12 @@ const getVillainZarate = async () => {
 
 const getRandomHero = async () => {
     const data = await getAllData()
-    return data[getRandomInt(5,100)];
+    return data[getRandomInt(5, 100)];
 }
 
 export {
-    getVillainZarate,getRandomHero,getRandomInt
+    getVillainZarate,
+    getRandomHero,
+    getRandomInt
 }
+

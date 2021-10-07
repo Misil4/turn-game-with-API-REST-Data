@@ -7,3 +7,4 @@ const getAllData = async () => {
 export {
     getAllData
 };
+

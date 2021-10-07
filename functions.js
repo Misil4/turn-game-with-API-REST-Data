@@ -30,18 +30,18 @@ const turn = (object, adversary, turn) => {
         if (block_Attack(object)) {
             console.log(`ATAQUE BLOQUEADO\ndurabilidad de ${
                 adversary.name
-            }-3 `)
-            adversary.powerstats.durability -= 3;
-            if (adversary.powerstats.durability < 1) {
-                console.log(`El jugador ${
-                    adversary.name
-                } no tiene mas durabilidad, partida finalizada`);
-            }
+            } restante : ${
+                adversary.powerstats.durability
+            }\n`)
+            adversary.powerstats.durability = adversary.powerstats.durability - 3;
         } else 
             return true
+
         
-    }
-    return false;
+
+    } else 
+        console.log("ATAQUE FALLADO");
+    
 }
 
 export {
@@ -51,4 +51,5 @@ export {
     initialize_Attack,
     turn
 }
+
 
