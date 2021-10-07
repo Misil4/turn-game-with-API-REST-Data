@@ -27,7 +27,7 @@ const turn = (object, adversary, turn) => {
     let dice = RandomFaces(100);
     console.log(`Se lanza un dado de 100 caras y sale ${dice}`);
     if (dice <= object.powerstats.combat) {
-        if (block_Attack(object)) {
+        if (block_Attack(adversary)) {
             console.log(`ATAQUE BLOQUEADO\ndurabilidad de ${
                 adversary.name
             } restante : ${
